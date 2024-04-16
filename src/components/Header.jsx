@@ -4,9 +4,9 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-
-function NavScrollExample() {
-
+function Header() {
+ 
+ 
   return (
     <Navbar expand="lg" bg="dark" data-bs-theme="dark" >
       <Container fluid>
@@ -18,11 +18,11 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">About</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
            
 
-            <Nav.Link href="#" >
+            <Nav.Link href="/contact" >
               Contact
             </Nav.Link>
           </Nav>
@@ -42,4 +42,4 @@ function NavScrollExample() {
 }
 
 
-export default NavScrollExample;
+export default Header;
