@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Home() {
+function Product() {
   return (
     <div className=' d-flex align-content-center justify-content-center'>
-      This is home
+      Our Products
     </div>
   )
 }
 
-export default Home
+export default Product

@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div>
+    <div className=' d-flex align-content-center justify-content-center's>
       This is about
     </div>
   )
