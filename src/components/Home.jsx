@@ -1,10 +1,12 @@
 import React from 'react'
 import Addtocart from './Addtocart'
-import Wishlist from './Wishlist'
-
+import '../App.css'
 function Home() {
   return (
     <>
+    <section className="hero-section">
+
+    </section>
     <h1 className=' d-flex align-content-center justify-content-center'>
       This is Home Page
     </h1>
@@ -17,7 +19,7 @@ function Home() {
 
       <div className='position-fixed bottom-0  end-0'>
         <Addtocart/>
-        <Wishlist/>
+        
       </div>
     </div>
     </>

@@ -14,17 +14,25 @@
 }
 
 
-/* Add CSS Transition */
 .navbar-collapse {
   transition: max-height 3s ease-in-out;
 }
 
-/* Set max-height to 0 when the drawer is closed */
 .drawer-closed .navbar-collapse {
   max-height: 0 !important;
 }
 
-/* Set max-height to none when the drawer is open */
 .drawer-open .navbar-collapse {
   max-height: none !important;
+}
+
+
+/* ====hero section main page=== */
+
+.hero-section{
+  background-image: url("https://codewithsadee.github.io/anon-ecommerce-website/assets/images/banner-3.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center ;
+  background-repeat: no-repeat;
 }
