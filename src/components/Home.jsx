@@ -17,7 +17,7 @@ function Home() {
 
       <div className='position-fixed bottom-0  end-0'>
         <Addtocart/>
-        
+        <Wishlist/>
       </div>
     </div>
     </>
