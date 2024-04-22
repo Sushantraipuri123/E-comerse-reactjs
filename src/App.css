@@ -1,42 +1,30 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Custom CSS */
+.text-grey {
+  color: grey;
+  text-decoration: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.text-grey:hover {
+  text-decoration: underline;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-light:focus,
+.text-light:hover {
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+/* Add CSS Transition */
+.navbar-collapse {
+  transition: max-height 3s ease-in-out;
 }
 
-.card {
-  padding: 2em;
+/* Set max-height to 0 when the drawer is closed */
+.drawer-closed .navbar-collapse {
+  max-height: 0 !important;
 }
 
-.read-the-docs {
-  color: #888;
+/* Set max-height to none when the drawer is open */
+.drawer-open .navbar-collapse {
+  max-height: none !important;
 }

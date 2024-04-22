@@ -1,25 +1,42 @@
-import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import '../App.css'
+import Addtocart from './Addtocart';
 
 function Header() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
   return (
-    <Navbar expand="lg" bg="dark" variant="dark">
-      <Container fluid>
-        <Navbar.Brand href="#" className='ms-5'>Hyna</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav className="ms-auto me-5 my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-            <NavLink to="/" className="nav-link">Home</NavLink>
-            <NavLink to="/product" className="nav-link">Product</NavLink>
-            <NavLink to="/about" className="nav-link">About</NavLink>
-            <NavLink to="/contact" className="nav-link">Contact</NavLink>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <div className='sticky-top'>
+      <nav className={`navbar navbar-expand-lg navbar-dark bg-dark ${drawerOpen ? 'drawer-open' : 'drawer-closed'}`}>
+        <div className="container-fluid">
+          <NavLink to="/" className="navbar-brand ms-5">Hyna</NavLink>
+          <button className="navbar-toggler" type="button" onClick={toggleDrawer}>
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className={`collapse navbar-collapse ${drawerOpen ? 'show' : ''}`}>
+            <ul className="navbar-nav ms-auto me-5 my-2 my-lg-0">
+              <li className="nav-item">
+                <NavLink to="/" className="nav-link" onClick={() => setDrawerOpen(false)}>Home</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/product" className="nav-link" onClick={() => setDrawerOpen(false)}>Product</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/about" className="nav-link" onClick={() => setDrawerOpen(false)}>About</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/contact" className="nav-link" onClick={() => setDrawerOpen(false)}>Contact</NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
   );
 }
 
