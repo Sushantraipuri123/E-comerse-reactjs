@@ -9,7 +9,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import '../App.css'
 function Footer() {
   return (
-    <footer className="bg-dark text-light ">
+    <footer className="bg-dark text-light mt-4 ">
       <Container fluid>
         <Row className="py-3">
           <Col md={4}>

@@ -1,11 +1,53 @@
 import React from 'react'
 import Addtocart from './Addtocart'
 import '../App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from 'react-bootstrap';
 function Home() {
   return (
     <>
-    <section className="hero-section">
-
+    <section className="hero-section  d-flex justify-content-center align-items-center ">
+      <div className="container ">
+      <div className="row ">
+        <div className="col-lg-6 col-md-6 col-sm-6 ">
+        <Carousel >
+      <Carousel.Item interval={3000}>
+        <div style={{ minHeight: '140px' }} >
+          <Carousel.Caption  className=' text-black-50'>
+            <h3>First slide label</h3>
+            <p>Some representative placeholder content for the first slide.</p>
+          </Carousel.Caption>
+        </div>
+      </Carousel.Item>
+      <Carousel.Item interval={1000}>
+        <div style={{ minHeight: '140px' }}>
+          <Carousel.Caption  className=' text-black-50'>
+            <h3>Second slide label</h3>
+            <p>Some representative placeholder content for the second slide.</p>
+          </Carousel.Caption>
+        </div>
+      </Carousel.Item>
+      <Carousel.Item  interval={1000}>
+        <div style={{ minHeight: '140px' }}>
+          <Carousel.Caption  className=' text-black-50'>
+            <h3>Third slide label</h3>
+            <p>Some representative placeholder content for the third slide.</p>
+          </Carousel.Caption>
+        </div>
+      </Carousel.Item>  
+        <Carousel.Item  interval={1000}>
+        <div style={{ minHeight: '140px' }}>
+          <Carousel.Caption  className=' text-black-50'>
+            <h3>Fiveth slide label</h3>
+            <p>Some representative placeholder content for the third slide.</p>
+          </Carousel.Caption>
+        </div>
+      </Carousel.Item>
+    </Carousel>
+          </div>
+        <div className="col-lg-6 "></div>
+      </div>
+      </div>
     </section>
     <h1 className=' d-flex align-content-center justify-content-center'>
       This is Home Page
