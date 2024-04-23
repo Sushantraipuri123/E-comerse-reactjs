@@ -14,7 +14,7 @@ function Home() {
       <Carousel.Item interval={3000}>
         <div style={{ minHeight: '140px' }} >
           <Carousel.Caption  className=' text-black-50'>
-            <h3>First slide label</h3>
+            <h2>First slide label</h2>
             <p>Some representative placeholder content for the first slide.</p>
           </Carousel.Caption>
         </div>
@@ -22,7 +22,7 @@ function Home() {
       <Carousel.Item interval={1000}>
         <div style={{ minHeight: '140px' }}>
           <Carousel.Caption  className=' text-black-50'>
-            <h3>Second slide label</h3>
+            <h2>Second slide label</h2>
             <p>Some representative placeholder content for the second slide.</p>
           </Carousel.Caption>
         </div>
@@ -30,7 +30,7 @@ function Home() {
       <Carousel.Item  interval={1000}>
         <div style={{ minHeight: '140px' }}>
           <Carousel.Caption  className=' text-black-50'>
-            <h3>Third slide label</h3>
+            <h2>Third slide label</h2>
             <p>Some representative placeholder content for the third slide.</p>
           </Carousel.Caption>
         </div>
@@ -38,7 +38,7 @@ function Home() {
         <Carousel.Item  interval={1000}>
         <div style={{ minHeight: '140px' }}>
           <Carousel.Caption  className=' text-black-50'>
-            <h3>Fiveth slide label</h3>
+            <h2>Fiveth slide label</h2>
             <p>Some representative placeholder content for the third slide.</p>
           </Carousel.Caption>
         </div>

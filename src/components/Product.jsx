@@ -23,7 +23,9 @@ function Product() {
         setLoading(false);
       });
   }, []);
-
+console.log('====================================');
+console.log(data, 'aaaaaaaaaaaaaaaaaaaaa');
+console.log('====================================');
   return (
     <>
       <div className="container">
@@ -39,7 +41,7 @@ function Product() {
               <div key={product.id} className="col">
                 <Card className="product-card">
                  
-                  <Card.Img variant="top" src={product.image} style={{ height: '300px', objectFit: 'contain' }} />
+                  <Card.Img variant="top" src={product.image} style={{ height: '300px', objectFit: 'contain' }} className='product-img'/>
                   <Card.Body>
                     <Card.Title style={{ overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{product.title}</Card.Title>
                     <Card.Text style={{ overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{product.description}</Card.Text>
