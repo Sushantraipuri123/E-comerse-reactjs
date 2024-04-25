@@ -8,7 +8,8 @@ import Contact from './components/Contact';
 import Product from './components/Product';
 import Mycart from './components/Mycart';
 import Singlepage from './components/Singlepage';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -23,6 +24,10 @@ ReactDOM.render(
         </Route>
       </Routes>
     </Router>
+    <ToastContainer
+position="bottom-right"
+limit={1}/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

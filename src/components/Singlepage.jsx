@@ -8,8 +8,10 @@
     import FormControlLabel from '@mui/material/FormControlLabel';
     import FormControl from '@mui/material/FormControl';
     import Button from '@mui/material/Button';
-    import CircularProgress from '@mui/material/CircularProgress'; // Import CircularProgress
+    import CircularProgress from '@mui/material/CircularProgress'; 
     import { useParams } from 'react-router-dom'; 
+    import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+    import {  toast } from 'react-toastify';
 
     function Singlepage() {
         const { id } = useParams();
@@ -44,14 +46,17 @@
             }
         };
 
+        let handleCart = ()=>{
+              toast.success("One Item Added To Cart")
+        }
         return (
             <>
-                {loading && ( // Show CircularProgress if loading state is true
+                {loading && ( 
                     <div className="d-flex justify-content-center mt-5">
                         <CircularProgress />
                     </div>
                 )}
-                {!loading && data && ( // Render content if loading is false and data is available
+                {!loading && data && ( 
                     <div className="container mt-5 mb-5">
                         <div className="row">
                             <div className="col-lg-6 col-md-6 d-flex justify-content-center">
@@ -104,11 +109,14 @@
                                         <Button variant="contained" onClick={handleIncrement} disabled={counter === 10}>+</Button>
                                     </div>
                                 </div>
+                                <div className="mt-4">
+                                <Button variant="outlined" onClick={handleCart}> <AddShoppingCartIcon /> Add to Cart </Button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 )}
-                {!loading && !data && ( // Render nothing if loading is false but data is not available
+                {!loading && !data && ( 
                     <div>No data found</div>
                 )}
                 <div className='position-fixed bottom-0 end-0'>
