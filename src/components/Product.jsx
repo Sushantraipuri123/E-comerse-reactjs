@@ -27,7 +27,7 @@ function Product() {
 
   return (
     <div className="container">
-      
+
       <h1 className='text-center mb-4'>Our Products</h1>
 
       {loading ? (
@@ -39,16 +39,16 @@ function Product() {
           {data.map((product) => (
             <div key={product.id} className="col">
               <Card className="product-card">
-                <Card.Img variant="top" src={product.image} style={{ height: '300px', objectFit: 'contain' }} className='product-img'/>
+                <Card.Img variant="top" src={product.image} style={{ height: '300px', objectFit: 'contain' }} className='product-img' />
                 <Card.Body>
                   <Card.Title style={{ overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{product.title}</Card.Title>
                   <Card.Text style={{ overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{product.description}</Card.Text>
                   <strong><span>${product.price}</span></strong>
                   <div className=" mt-3 d-flex justify-content-between">
-                    <Link to={`/singlepage/${product.id}`}> 
+                    <Link to={`/singlepage/${product.id}`}>
                       <Button variant="outlined">MORE INFO</Button>
                     </Link>
-                    
+
                     <Box
                       sx={{
                         display: 'flex',
@@ -70,9 +70,9 @@ function Product() {
             </div>
           ))}
         </div>
-        
+
       )}
-        
+
     </div>
   );
 }
