@@ -3,6 +3,12 @@ import Addtocart from './Addtocart'
 import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import { Link } from 'react-router-dom';
 function Home() {
   return (
     <>
@@ -50,6 +56,76 @@ function Home() {
         </div>
       </section>
 
+<h2 className=' mt-2 text-center '> Our categories</h2>
+<div className="container-fluid d-flex justify-content-around gap-5 g-4 flex-wrap mt-3 mb-3 ">
+  
+
+  <Link  to="/men" style={{textDecoration: 'none'}}>
+<Card sx={{ maxWidth: 345 }} >
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="240"
+          image="https://studio1emporio.com/wp-content/uploads/2022/10/male-models-for-e-commerce-shoot-in-delhi.webp"
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Men's Section
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo laudantium ad eveniet veritatis praesentium?
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+    </Link>
+
+    <Link  to="/women" style={{textDecoration: 'none'}}>
+    <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="240"
+          image="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2022-07/beautiful-asian-woman-carrying-colorful-bags-shopping-online-with-mobile-phone-min_0.jpg"
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Women's Section
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo laudantium ad eveniet veritatis praesentium?
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+    </Link>
+    <Link  to="/electronics" style={{textDecoration: 'none'}}>
+    <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="240"
+          image="https://m.economictimes.com/thumb/msid-79975989,width-1200,height-900,resizemode-4,imgsize-449089/electronics1-thinkstock.jpg"
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Electonics Section
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo laudantium ad eveniet veritatis praesentium?
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+    </Link>
+
+   
+
+    
+</div>
       <div className=' d-flex align-content-center justify-content-center'>
 
 

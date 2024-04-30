@@ -8,6 +8,9 @@ import Contact from './components/Contact';
 import Product from './components/Product';
 import Mycart from './components/Mycart';
 import Singlepage from './components/Singlepage';
+import Men from './components/categories/Men';
+import Women from './components/categories/Women';
+import Electronics from './components/categories/Electronics';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +23,9 @@ ReactDOM.render(
           <Route path="contact" element={<Contact />} />
           <Route path="mycarts" element={<Mycart />} />
           <Route path="singlepage/:id" element={<Singlepage />} />
+          <Route path="men" element={<Men/>} />
+          <Route path="women" element={<Women/>} />
+          <Route path="electronics" element={<Electronics/>} />
         </Route>
       </Routes>
     </Router>
