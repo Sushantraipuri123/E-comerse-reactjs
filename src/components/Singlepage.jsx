@@ -69,6 +69,7 @@ function Singlepage() {
 
     const handleClick = () => {
         setOpen(true);
+        alert(data.id)
     };
 
     const handleClose = (event, reason) => {
