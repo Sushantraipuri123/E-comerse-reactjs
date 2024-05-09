@@ -15,6 +15,12 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Card from 'react-bootstrap/Card';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert'
+import { useDispatch } from 'react-redux'; 
+import {addToCart} from '../features/cartSlice';
+
+
+
+
 function Singlepage() {
     const { id } = useParams();
     const [data, setData] = useState(null);
@@ -67,10 +73,20 @@ function Singlepage() {
 
     const [open, setOpen] = useState(false);
 
-    const handleClick = () => {
-        setOpen(true);
-        alert(data.id)
+    const dispatch = useDispatch();
+
+    const handleAddToCart = () => {
+        const newItem = {
+            title: data.title,
+            description: data.description,
+            price: data.price,
+            image: data.image,
+            quantity : counter,
+        };
+        dispatch(addToCart(newItem));
+        setOpen(true); // Open the Snackbar to indicate that the item is added to the cart
     };
+    
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -143,11 +159,11 @@ function Singlepage() {
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <Button variant="outlined" onClick={handleClick}>
+                                <Button variant="outlined" onClick={handleAddToCart}>
                                     <AddShoppingCartIcon /> Add to Cart
                                 </Button>
 
-                                <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                                <Snackbar open={open}  autoHideDuration={5000} onClose={handleClose}>
                                     <Alert
                                         onClose={handleClose}
                                         severity="success"

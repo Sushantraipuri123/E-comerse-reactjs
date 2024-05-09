@@ -11,9 +11,12 @@ import Singlepage from './components/Singlepage';
 import Men from './components/categories/Men';
 import Women from './components/categories/Women';
 import Electronics from './components/categories/Electronics';
+import { store } from './app/store'
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
   <React.StrictMode>
+     <Provider store={store}>
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -29,8 +32,7 @@ ReactDOM.render(
         </Route>
       </Routes>
     </Router>
-    
-
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

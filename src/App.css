@@ -27,6 +27,11 @@
 }
 
 
+.cart-image {
+  max-width: 100%; 
+  height: auto; 
+}
+
 /* ====hero section main page=== */
 
 .hero-section{
