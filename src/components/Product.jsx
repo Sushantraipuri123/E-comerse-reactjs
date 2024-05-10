@@ -24,7 +24,7 @@ function Product() {
         setLoading(false);
       });
   }, []);
-
+  console.log(data);
   return (
     <div className="container">
 

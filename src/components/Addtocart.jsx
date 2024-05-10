@@ -18,13 +18,14 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 
-export default function Addtocart() {
+export default function Addtocart({ cartLength }) {
+  console.log("Cart Length:", cartLength);
   return (
     <Box sx={{ '& > :not(style)': { m: 1 } }}>
     <Fab>
     <Link to="/mycarts" >
     <IconButton aria-label="cart">
-      <StyledBadge badgeContent={44} color="secondary">
+      <StyledBadge badgeContent={cartLength} color="secondary">
         <ShoppingCartIcon style={{ color: grey[50] }} />
       </StyledBadge>
     </IconButton>

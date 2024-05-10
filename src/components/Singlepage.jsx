@@ -79,6 +79,7 @@ function Singlepage() {
         const newItem = {
             title: data.title,
             description: data.description,
+            id: data.id,
             price: data.price,
             image: data.image,
             quantity : counter,
@@ -163,7 +164,7 @@ function Singlepage() {
                                     <AddShoppingCartIcon /> Add to Cart
                                 </Button>
 
-                                <Snackbar open={open}  autoHideDuration={5000} onClose={handleClose}>
+                                {/* <Snackbar open={open}  autoHideDuration={5000} onClose={handleClose}>
                                     <Alert
                                         onClose={handleClose}
                                         severity="success"
@@ -172,7 +173,7 @@ function Singlepage() {
                                     >
                                         One item added to cart
                                     </Alert>
-                                </Snackbar>
+                                </Snackbar> */}
                             </div>
                         </div>
                     </div>
@@ -181,6 +182,7 @@ function Singlepage() {
             {!loading && !data && (
                 <div>No data found</div>
             )}
+            
             <div className='position-fixed bottom-0 end-0'>
                 <Addtocart productId={id} />
             </div>
