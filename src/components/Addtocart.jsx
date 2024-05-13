@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { grey } from '@mui/material/colors'
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -18,8 +19,12 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 
-export default function Addtocart({ cartLength }) {
-  console.log("Cart Length:", cartLength);
+export default function Addtocart() {
+
+  const carts = useSelector(state => state.cart);
+  const cartLength = carts.length;
+
+  console.log("Cart Length:", );
   return (
     <Box sx={{ '& > :not(style)': { m: 1 } }}>
     <Fab>

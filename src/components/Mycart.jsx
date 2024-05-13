@@ -108,6 +108,9 @@ function Mycart() {
         Place Order
       </Button>
    </div>
+   <div className='position-fixed bottom-0  end-0'>
+          <Addtocart  />
+        </div>
     </div>
   );
 }
