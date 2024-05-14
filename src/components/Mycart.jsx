@@ -65,7 +65,8 @@ function Mycart() {
 
          </div>
       </div>
-     <div className="container">
+      <hr className='mt-5'/>
+     <div className="container mt-5">
      <Card >
       <Card.Header  className="d-flex justify-content-between">
       <div>
