@@ -1,8 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+
+// === getting data from local storage that i had stored in my cart page ===
+const GetDataFromLocalStorage = () => {
+ let localCartData = localStorage.getItem("cart");
+ if (localCartData.length === 0) {
+    return [];
+ }else{
+    return JSON.parse(localCartData)
+ }
+}
+
 const initialState = {
-    cart : [],
+    cart : GetDataFromLocalStorage(),
   }
+
 
 export const cartSlice = createSlice({
     name:'cart',

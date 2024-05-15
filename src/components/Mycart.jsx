@@ -24,6 +24,13 @@ function Mycart() {
     setTotalPrice(calculatedTotalPrice.toFixed(2));
   }, [carts]);
   
+  // =========setting data in local storage======
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(carts))  
+  }, [carts])
+  
+  // getting data from local storage { THAT I HAD DONE IN CARTsLOCE.JS}=====
+  
   return (
     <div>
       <h1 className='text-center align-items-center mt-2'>
