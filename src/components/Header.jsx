@@ -32,9 +32,7 @@ function Header() {
               <li className="nav-item">
                 <NavLink to="/contact" className="nav-link" onClick={() => setDrawerOpen(false)}>Contact</NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink to="/signup" className="nav-link" onClick={() => setDrawerOpen(false)}>Sign up</NavLink>
-              </li>
+             
             </ul>
           </div>
         </div>
