@@ -65,6 +65,8 @@ function Product() {
     return false;
   });
 
+  // console.log(import.meta.env.VITE_APPWRITE_URL)
+
   return (
     <div className="container">
       <h1 className='text-center '>Our Products</h1>
