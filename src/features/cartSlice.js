@@ -4,11 +4,11 @@ import { createSlice } from '@reduxjs/toolkit'
 // === getting data from local storage that i had stored in my cart page ===
 const GetDataFromLocalStorage = () => {
  let localCartData = localStorage.getItem("cart");
- if (localCartData.length === 0) {
+ if (!localCartData) {
     return [];
- }else{
-    return JSON.parse(localCartData)
- }
+} else {
+    return JSON.parse(localCartData);
+}
 }
 
 const initialState = {
