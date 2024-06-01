@@ -13,6 +13,7 @@ import Women from './components/categories/Women';
 import Electronics from './components/categories/Electronics';
 import { store } from './app/store'
 import { Provider } from 'react-redux'
+import Address from './components/checkout/Address';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -29,6 +30,7 @@ ReactDOM.render(
           <Route path="men" element={<Men/>} />
           <Route path="women" element={<Women/>} />
           <Route path="electronics" element={<Electronics/>} />
+          <Route path="address" element={<Address/>} />
         </Route>
       </Routes>
     </Router>

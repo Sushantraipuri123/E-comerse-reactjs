@@ -9,6 +9,7 @@ import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDiss
 import Addtocart from './Addtocart';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from 'react-router-dom';
 
 function Mycart() {
 
@@ -112,9 +113,11 @@ function Mycart() {
     
      </div>
    <div className="d-flex justify-content-center my-3">
+   <Link to="/address">
    <Button variant='contained' disabled={carts.length===0}>
         Place Order
       </Button>
+      </Link>
    </div>
    <div className='position-fixed bottom-0  end-0'>
           <Addtocart  />
