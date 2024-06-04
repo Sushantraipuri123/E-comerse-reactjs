@@ -74,7 +74,7 @@ export default function Address() {
       case 0:
         return (
          <div className="container mt-lg-5 mt-md-3">
-            <h4>Shipp to  </h4>
+            <h3 className=' text-center '><u>Shipp to </u> </h3>
        
       <Form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-row mt-4">
@@ -165,7 +165,7 @@ export default function Address() {
 
         <div className=" d-flex justify-content-center">
         <Button variant="outlined" className=' mt-4 ' type="submit" isSubmitted ={handleNext}>
-          Submit
+          Proceed to Pay
         </Button>
         </div>
       </Form>
@@ -261,9 +261,9 @@ export default function Address() {
               <Box sx={{ flex: '1 1 auto' }} />
             
 
-              <Button onClick={handleNext}>
+              {/* <Button onClick={handleNext}>
                 {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-              </Button>
+              </Button> */}
             </Box>
           </React.Fragment>
         )}
